@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .container {
@@ -16,6 +16,43 @@ body {
   align-items: center;
   height: 100vh;
   background-color: rgb(205, 230, 212);
+}
+
+/* ===== Botão X ===== */
+.btn-fechar-primary {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 2rem;
+  color: rgb(178, 228, 171);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.3s;
+  z-index: 10;
+}
+
+.btn-fechar-primary:hover {
+  transform: scale(1.2);
+  color: rgb(115, 192, 104)
+}
+
+.btn-fechar-second {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 2rem;
+  color: rgb(178, 228, 171);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.3s;
+  z-index: 10;
+}
+
+.btn-fechar-second:hover {
+  transform: scale(1.2);
+  color: rgb(205, 230, 212);
 }
 
 .content {
@@ -29,7 +66,7 @@ body {
 }
 
 .content::before {
-  content:"";
+  content: "";
   position: absolute;
   background-color: rgb(115, 192, 104);
   width: 40%;
@@ -48,13 +85,13 @@ body {
 }
 
 .title-second {
-  color: rgb(115, 192, 104) ;
+  color: rgb(115, 192, 104);
 }
 
 .description {
   font-size: 14px;
   font-weight: 300;
-  color:#fff;
+  color: #fff;
   line-height: 30px;
 }
 
@@ -88,13 +125,13 @@ body {
 .btn-primary:hover {
   background-color: #fff;
   color: rgb(178, 228, 171);
-  transition: background-color .5s;
+  transition: background-color 0.5s;
 }
 
 .btn-second {
   background-color: rgb(115, 192, 104);
   border: 1px solid rgb(115, 192, 104);
-  transition: background-color .5s;
+  transition: background-color 0.5s;
 }
 
 .btn-second:hover {
@@ -128,18 +165,18 @@ body {
   margin: 1rem 0;
 }
 
-.link-social-media:not(:first-child){
+.link-social-media:not(:first-child) {
   margin-left: 10px;
 }
 
 .list-social-media .item-social-media {
-  transition: background-color .5s;
+  transition: background-color 0.5s;
 }
 
 .link-social-media:hover .item-social-media {
- background-color: rgb(115, 192, 104);
- color: rgb(247, 255, 246);
- border: rgb(115, 192, 104);
+  background-color: rgb(115, 192, 104);
+  color: rgb(247, 255, 246);
+  border: rgb(115, 192, 104);
 }
 
 .list-social-media {
@@ -163,8 +200,13 @@ body {
   width: 55%;
 }
 
+.form input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 .form input {
-  height: 45px;  
+  height: 45px;
   width: 100%;
   border: none;
   background-color: rgb(236, 248, 248);
@@ -175,6 +217,9 @@ body {
   display: flex;
   align-items: center;
   margin: 6px;
+  border-radius: 15px;
+  padding: 0 10px;
+  gap: 10px;
 }
 
 .icon-modify {
@@ -208,6 +253,18 @@ body {
   text-transform: capitalize;
 }
 
+.btn-voltar {
+  background-color: rgb(247, 255, 246);
+  border: 1px solid rgb(115, 192, 104);
+  transition: background-color 0.5s;
+}
+
+.btn-voltar:hover {
+  background-color: #fff;
+  color: rgb(178, 228, 171);
+  transition: background-color 0.5s;
+}
+
 .sign-in-js .first-content .first-column,
 .sign-in-js .first-content .second-column {
   z-index: -1;
@@ -233,111 +290,73 @@ body {
   z-index: 11;
 }
 
-/* Responsividade */
-@media screen and (max-width: 1024px) and (min-width: 769px) {
-  .content {
-    width: 85%;
-    height: auto;
-    flex-direction: column;
-    margin: 2rem auto;
-    padding: 2rem;
+/* ===== RESPONSIVIDADE ===== */
+
+@media (max-width: 992px) {
+  .first-content,
+  .second-content {
+    flex-direction: column !important;
+    width: 90% !important;
+    height: auto !important;
   }
 
-  .first-content, .second-content {
-    flex-direction: column;
-  }
-
-  .first-column, .second-column {
-    width: 100%;
+  .first-content .first-column,
+  .first-content .second-column,
+  .second-content .first-column,
+  .second-content .second-column {
+    width: 100% !important;
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 15px;
+    order: unset !important;
   }
 
-  .content::before {
-    width: 100%;
-    height: 250px;
-    border-radius: 15px 15px 0 0;
-    left: 0;
+  .first-content.sign-up-js .first-column {
+    order: 2 !important;
   }
 
-  .form {
-    width: 90%;
-    margin: 0 auto;
+  .first-content.sign-up-js .second-column {
+    order: 1 !important;
+  }
+
+  .second-content.sign-in-js .first-column {
+    order: 2 !important;
+  }
+
+  .second-content.sign-in-js .second-column {
+    order: 1 !important;
   }
 }
 
-@media screen and (max-width: 768px) and (min-width: 480px) {
-  .content {
-    width: 90%;
-    height: auto;
-    flex-direction: column;
-    margin: 3rem auto;
-    padding: 1.5rem;
+@media (max-width: 576px) {
+  .first-content,
+  .second-content {
+    flex-direction: column !important;
+    width: 95% !important;
   }
 
-  .first-column, .second-column {
-    width: 100%;
+  .first-content .first-column,
+  .first-content .second-column,
+  .second-content .first-column,
+  .second-content .second-column {
+    width: 100% !important;
     text-align: center;
-    margin-bottom: 2rem;
-  }
-
-  .content::before {
-    height: 200px;
-  }
-
-  .title {
-    font-size: 24px;
-  }
-
-  .description {
-    font-size: 13px;
-    line-height: 26px;
-  }
-
-  .btn {
-    width: 100%;
-    padding: 12px;
-  }
-
-  .form {
-    width: 95%;
+    margin-bottom: 10px;
   }
 }
 
-@media screen and (max-width: 479px) {
-  .content {
-    width: 95%;
-    height: auto;
-    flex-direction: column;
-    margin: 4rem auto;
-    padding: 1rem;
+@media (max-width: 380px) {
+  .first-content,
+  .second-content {
+    flex-direction: column !important;
+    width: 100% !important;
   }
 
-  .first-column, .second-column {
-    width: 100%;
+  .first-content .first-column,
+  .first-content .second-column,
+  .second-content .first-column,
+  .second-content .second-column {
+    width: 100% !important;
     text-align: center;
-    margin-bottom: 2rem;
-  }
-
-  .content::before {
-    height: 150px;
-  }
-
-  .title {
-    font-size: 20px;
-  }
-
-  .description {
-    font-size: 12px;
-    line-height: 24px;
-  }
-
-  .btn {
-    width: 100%;
-    padding: 10px;
-  }
-
-  .form {
-    width: 100%;
+    margin-bottom: 5px;
   }
 }
