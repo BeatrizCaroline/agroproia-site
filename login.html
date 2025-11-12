@@ -1,116 +1,208 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>login</title>
+    <!-- Normalize CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-  <!-- Normalize CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Fontes e ícones -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
-  <!-- Font Roboto -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
 
-  <link rel="stylesheet" href="css/login.css">
+  <body>
+    <div class="container">
+      <!-- ==== CRIAR CONTA ==== -->
+      <div class="content first-content">
+        <button class="btnFechar btn-fechar-primary" title="Voltar à Home">
+          &times;
+        </button>
 
-  <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/4ac9fb4be4.js" crossorigin="anonymous"></script>
+        <div class="first-column">
+          <h2 class="title title-primary">Bem-vindo de volta!</h2>
+          <p class="description description-primary">
+            Para manter-se conectado conosco, por favor, entre com suas
+            informações pessoais.
+          </p>
+          <button id="signin" class="btn btn-primary">Entrar</button>
+        </div>
 
-</head>
+        <div class="second-column">
+          <h2 class="title title-second">Criar Conta</h2>
 
-<body>
-  <div class="container">
-    <div class="content first-content">
-      <button id="btnFechar" class="btn-fechar-primary" title="Voltar à Home">&times;</button>
-      <div class="first-column">
-        <h2 class="title title-primary">Bem Vindo de Volta!</h2>
-        <p class="description description-primary">Para manter-se conectado conosco</p>
-        <p class="description description-primary">por favor, logue com suas informações pessoais</p>
-        <button id="signin" class="btn btn-primary">Entrar</button>
+          <div class="social-media">
+            <ul class="list-social-media">
+              <a class="link-social-media" href="#"
+                ><li class="item-social-media">
+                  <i class="fa-brands fa-facebook"></i></li
+              ></a>
+              <a class="link-social-media" href="#"
+                ><li class="item-social-media">
+                  <i class="fa-brands fa-google"></i></li
+              ></a>
+              <a class="link-social-media" href="#"
+                ><li class="item-social-media">
+                  <i class="fa-brands fa-linkedin"></i></li
+              ></a>
+            </ul>
+          </div>
+
+          <p class="description description-second">
+            ou utilize o seu e-mail para registro:
+          </p>
+
+          <!-- Mensagem de erro/confirmação -->
+          <div id="signup-message" class="message-box"></div>
+
+          <form id="signup-form" class="form" novalidate>
+            <label class="label-input">
+              <i class="fa-solid fa-user icon-modify"></i>
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                placeholder="Nome"
+                required
+              />
+            </label>
+
+            <label class="label-input">
+              <i class="fa-solid fa-envelope icon-modify"></i>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="E-mail"
+                required
+              />
+            </label>
+
+            <label class="label-input">
+              <i class="fa-solid fa-lock icon-modify"></i>
+              <input
+                type="password"
+                id="senha"
+                name="senha"
+                placeholder="Senha"
+                minlength="6"
+                required
+              />
+            </label>
+
+            <label class="label-input select-agricultor">
+              <i class="fa-solid fa-tractor icon-modify"></i>
+              <select id="perfilAgricultor" name="perfil" required>
+                <option value="" disabled selected>
+                  Selecione seu perfil de agricultor
+                </option>
+                <option value="tradicional">Tradicional</option>
+                <option value="empreendedor">Empreendedor</option>
+                <option value="tecnologico">Tecnológico</option>
+                <option value="sustentavel">Sustentável</option>
+                <option value="familiar">Familiar</option>
+                <option value="corporativo">Corporativo</option>
+              </select>
+              <i
+                class="fa-solid fa-circle-info info-icon"
+                title="Informações do perfil"
+              ></i>
+              <div class="tooltip-info"></div>
+            </label>
+
+            <button type="submit" class="btn btn-second">Registre-se</button>
+          </form>
+        </div>
       </div>
-      <div class="second-column">
-        <h2 class="title title-second">Criar Conta</h2>
-        <div class="social-media">
-          <ul class="list-social-media">
-            <a class="link-social-media" href="#">
-              <li class="item-social-media"><i class="fa-brands fa-facebook"></i></li>
-            </a>
-            <a class="link-social-media" href="#">
-              <li class="item-social-media"><i class="fa-brands fa-google"></i></li>
-            </a>
-            <a class="link-social-media" href="#">
-              <li class="item-social-media"><i class="fa-brands fa-linkedin"></i></li>
-            </a>
-          </ul>
-        </div> <!--Social media-->
-        <p class="descripition description-second">ou utilize o seu e-mail para o registro:</p>
-        <form class="form">
-          <label class="label-input" for="">
-            <i class="fa-solid fa-user icon-modify"></i>
-            <input type="text" placeholder="Nome">
-          </label>
-          <label class="label-input" for="">
-            <i class="fa-solid fa-envelope icon-modify"></i>
-            <input type="email" placeholder="E-mail">
-          </label>
-          <label class="label-input" for="">
-            <i class="fa-solid fa-lock icon-modify"></i>
-            <input type="password" placeholder="Senha">
-          </label>
-          <button class="btn btn-second">Registre-se</button>
-        </form>
 
-      </div> <!--second coluna-->
-    </div> <!--first-colomun-->
-    <div class="content second-content">
-      <button id="btnFechar" class="btn-fechar-second" title="Voltar à Home">&times;</button>
-      <div class="first-column">
-        <h2 class="title title-primary">Olá, amigo(a)!</h2>
-        <p class="description description-primary">Insira seus dados pessoais</p>
-        <p class="description description-primary">e comece a jornada conosco</p>
-        <button id="signup" class="btn btn-primary">Registre-se</button>
+      <!-- ==== LOGIN ==== -->
+      <div class="content second-content">
+        <button class="btnFechar btn-fechar-second" title="Voltar à Home">
+          &times;
+        </button>
+
+        <div class="first-column">
+          <h2 class="title title-primary">Olá, amigo(a)!</h2>
+          <p class="description description-primary">
+            Insira seus dados pessoais e comece a jornada conosco.
+          </p>
+          <button id="signup" class="btn btn-primary">Registre-se</button>
+        </div>
+
+        <div class="second-column">
+          <h2 class="title title-second">Faça login</h2>
+
+          <div class="social-media">
+            <ul class="list-social-media">
+              <a class="link-social-media" href="#"
+                ><li class="item-social-media">
+                  <i class="fa-brands fa-facebook"></i></li
+              ></a>
+              <a class="link-social-media" href="#"
+                ><li class="item-social-media">
+                  <i class="fa-brands fa-google"></i></li
+              ></a>
+              <a class="link-social-media" href="#"
+                ><li class="item-social-media">
+                  <i class="fa-brands fa-linkedin"></i></li
+              ></a>
+            </ul>
+          </div>
+
+          <p class="description description-second">
+            ou use sua conta de e-mail:
+          </p>
+          <div id="mensagem" class="mensagem"></div>
+
+          <!-- Mensagem de erro/confirmação -->
+          <div id="login-message" class="message-box"></div>
+
+          <form id="login-form" class="form" novalidate>
+            <label class="label-input">
+              <i class="fa-solid fa-envelope icon-modify"></i>
+              <input
+                type="email"
+                id="login-email"
+                name="email"
+                placeholder="E-mail"
+                required
+              />
+            </label>
+
+            <label class="label-input">
+              <i class="fa-solid fa-lock icon-modify"></i>
+              <input
+                type="password"
+                id="login-senha"
+                name="senha"
+                placeholder="Senha"
+                required
+              />
+            </label>
+          </form>
+          <a class="password" href="recupSenha.html">Esqueceu sua senha?</a>
+          <button type="submit" class="btn btn-second">Entrar</button>
+        </div>
       </div>
-      <div class="second-column">
-        <h2 class="title title-second">Faça login</h2>
-        <div class="social-media">
-          <ul class="list-social-media">
-            <a class="link-social-media" href="#">
-              <li class="item-social-media"><i class="fa-brands fa-facebook"></i></li>
-            </a>
-            <a class="link-social-media" href="#">
-              <li class="item-social-media"><i class="fa-brands fa-google"></i></li>
-            </a>
-            <a class="link-social-media" href="#">
-              <li class="item-social-media"><i class="fa-brands fa-linkedin"></i></li>
-            </a>
-          </ul>
-        </div> <!--Social media-->
-        <p class="description description-second">ou use sua conta de e-mail:</p>
-        <form class="form">
-          <label class="label-input" for="">
-            <i class="fa-solid fa-envelope icon-modify"></i>
-            <input type="email" placeholder="E-mail">
-          </label>
-          <label class="label-input" for="">
-            <i class="fa-solid fa-lock icon-modify"></i>
-            <input type="password" placeholder="Senha">
-          </label>
-          <a class="password" href="#">Esqueceu sua senha?</a>
-          <button class="btn btn-second">Entrar</button>
-        </form>
-      </div> <!--second coluna-->
-    </div> <!--second-content-->
-  </div>
+    </div>
 
-  <script src="js/login.js"></script>
-  <script src="js/homeDeslog.js"></script>
-</body>
-
+    <script src="js/login.js"></script>
+    <script src="js/homeDeslog.js"></script>
+  </body>
 </html>
-
-<!--Para responsividade, os tamanhos são de 380px, 576px, 992px -->
