@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recuperar Senha</title>
+
+    <!-- Normalize CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+
+    <!-- Fontes e ícones -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Estilo da página -->
+    <link rel="stylesheet" href="css/recupSenha.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="content">
+        <button
+          class="btnFechar btn-fechar-second"
+          title="Voltar ao Login"
+          onclick="window.location.href='index.html'"
+        >
+          &times;
+        </button>
+
+        <div class="second-column">
+          <h2 class="title title-second">Redefinir Senha</h2>
+          <p class="description description-second">
+            Insira o e-mail associado à sua conta e enviaremos instruções para redefinir sua senha.
+          </p>
+
+          <!-- Mensagem de feedback -->
+          <div id="forgot-message" class="message-box"></div>
+
+          <form id="forgot-form" class="form" novalidate>
+            <label class="label-input">
+              <i class="fa-solid fa-envelope icon-modify"></i>
+              <input
+                type="email"
+                id="email-recuperacao"
+                name="email"
+                placeholder="E-mail"
+                required
+              />
+            </label>
+
+            <button type="submit" class="btn btn-second">
+              Enviar link de recuperação
+            </button>
+          </form>
+
+          <a class="password" href="login.html">Voltar para o login</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/recupSenha.js"></script>
+  </body>
+</html>
