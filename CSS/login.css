@@ -290,6 +290,107 @@ body {
   z-index: 11;
 }
 
+/* perfil agricultor */
+.select-agricultor {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: rgb(236, 248, 248);
+  border: none;
+  border-radius: 15px;
+  padding: 8px;
+  margin-bottom: 15px;
+}
+
+.select-agricultor select {
+  flex: 1;
+  padding: 6px;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  outline: none;
+  color: #333;
+}
+
+.info-icon {
+  margin-left: 8px;
+  cursor: pointer;
+  color: rgb(115, 192, 104);
+  transition: color 0.2s ease;
+  position: relative;
+}
+
+.info-icon:hover {
+  color: rgb(178, 228, 171);
+}
+
+/* Tooltip lateral */
+.tooltip-info {
+  position: absolute;
+  top: 50%;
+  left: 105%;
+  transform: translateY(-50%);
+  background-color: rgb(236, 248, 248);
+  border: 1px solid rgb(178, 228, 171);
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 13px;
+  color: #333;
+  width: 200px;
+  display: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.info-icon:hover + .tooltip-info {
+  display: block;
+}
+
+.btn-fechar-primary, .btnFechar {
+  z-index: 99999 !important;
+  pointer-events: auto !important;
+}
+
+/* ===== Mensagens de Erro e Confirmação ===== */
+
+.mensagem {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  min-width: 280px;
+  max-width: 350px;
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.4s ease;
+  z-index: 9999;
+}
+
+.mensagem.ativa {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mensagem.sucesso {
+  background-color: #d1f2e0;
+  border-left: 6px solid rgb(115, 192, 104);
+  color: #1b5e20;
+}
+
+.mensagem.erro {
+  background-color: #f8d7da;
+  border-left: 6px solid #dc3545;
+  color: #721c24;
+}
+
+.mensagem i {
+  margin-right: 8px;
+}
+
 /* ===== RESPONSIVIDADE ===== */
 
 @media (max-width: 992px) {
