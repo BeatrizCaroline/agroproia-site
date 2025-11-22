@@ -1,0 +1,257 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f5f9f9;
+}
+
+.header-title {
+  width: 100%;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+
+.header-title h1 {
+  color: #428800;
+  font-size: 2rem;
+}
+
+.navbar {
+  width: 100%;
+  background-color: rgb(115, 192, 104);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  list-style: none;
+  padding: 8px 0;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 4px;
+  min-width: 180px;
+}
+
+.submenu li {
+  text-align: left;
+}
+
+.submenu a {
+  display: block;
+  padding: 10px 15px;
+  color: rgb(115, 192, 104);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.submenu a:hover {
+  background-color: rgba(178, 228, 171, 0.2);
+}
+
+.dropdown > a {
+  cursor: pointer;
+}
+
+.dropdown.open .submenu {
+  display: block;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-info span {
+  color: white;
+  font-weight: bold;
+}
+
+.logout-btn {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.logout-btn:hover {
+  color: #f1f1f1;
+}
+
+.search-area {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+#searchBar {
+  width: 60%;
+  max-width: 400px;
+  padding: 10px;
+  border: 2px solid rgb(115, 192, 104);
+  border-radius: 8px;
+  outline: none;
+}
+
+#searchBar:focus {
+  border-color: rgb(90, 165, 80);
+}
+
+.category-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.cat-btn {
+  padding: 10px 15px;
+  border: 2px solid rgb(115, 192, 104);
+  background-color: #fff;
+  color: rgb(115, 192, 104);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.cat-btn.active {
+  background-color: rgb(115, 192, 104);
+  color: #fff;
+}
+
+.faq-container {
+  flex: 1;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.faq-category h2 {
+  color: rgb(115, 192, 104);
+  margin-top: 50px;
+  margin-bottom: 35px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.faq-item {
+  background-color: #fff;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
+}
+
+.faq-question {
+  width: 100%;
+  padding: 15px 20px;
+  border: none;
+  background-color: rgb(115, 192, 104);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-align: center;
+}
+
+.faq-question:hover {
+  background-color: rgb(95, 172, 84);
+}
+
+.faq-answer {
+  display: none;
+  padding: 15px 20px;
+  background-color: #f5f9f9;
+  border-top: 1px solid #ddd;
+}
+
+.footer {
+  background-color: rgb(115, 192, 104);
+  color: white;
+  text-align: center;
+  padding: 8px; 
+  font-size: 0.8rem;
+}
+
+@media (max-width: 992px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  #searchBar {
+    width: 100%;
+  }
+  .category-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  header h1 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 380px) {
+  body {
+    padding: 10px;
+  }
+  header h1 {
+    font-size: 1.3rem;
+  }
+  .faq-question {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+  .faq-answer {
+    font-size: 0.85rem;
+    padding: 10px 12px;
+  }
+}

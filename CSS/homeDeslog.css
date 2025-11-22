@@ -5,12 +5,6 @@
   font-family: 'Roboto', sans-serif;
 }
 
-html, body {
-  margin: 1px;
-  padding: 1px;
-  height: 100%;
-}
-
 body {
   display: flex;
   flex-direction: column;
@@ -21,31 +15,64 @@ body {
 /* ===== NAVBAR ===== */
 .navbar {
   width: 100%;
-  border-radius: .5px;
   background-color: rgb(115, 192, 104);
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
+  padding: 10px;
+  font-weight: bold;
 }
 
 .logo {
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 
 .menu {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 40px;
 }
 
 .menu a {
   color: white;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: bold;
+  font-size: 0.9rem;
   transition: 0.3s;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+/* ===== TITLES & TEXT ===== */
+.main-content h1 {
+  font-size: 1.6rem;
+}
+
+.text-title {
+  font-size: 0.9rem;
+}
+
+.subtitle {
+  font-size: 0.85rem;
+}
+
+/* ===== TEXT ===== */
+.main-content h1 {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.text-title {
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+}
+
+.subtitle {
+  font-size: 0.85rem;
 }
 
 .menu a:hover {
@@ -78,21 +105,21 @@ body {
 
 /* ===== CARDS ===== */
 .cards-container {
-  margin-top: 40px;
+  margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 50px;
+  gap: 18px;
   justify-items: center;
   justify-content: center;
-  max-width: 900px;
+  max-width: 720px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .card {
-  width: 200px;
-  height: 200px;
-  perspective: 1000px;
+  width: 135px;
+  height: 135px;
+  perspective: 900px;
   cursor: pointer;
 }
 
@@ -100,10 +127,10 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  border-radius: 15px;
+  border-radius: 9px;
   transition: transform 0.8s;
   transform-style: preserve-3d;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.18);
 }
 
 .card.flipped .card-inner {
@@ -114,7 +141,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  border-radius: 15px;
+  border-radius: 9px;
   backface-visibility: hidden;
   overflow: hidden;
   background-color: rgb(247, 255, 246);
@@ -122,13 +149,13 @@ body {
 
 .card-front img {
   width: 100%;
-  height: 80%;
+  height: 78%;
   object-fit: cover;
 }
 
 .card-front h3 {
-  padding: 5px;
-  font-size: 1rem;
+  padding: 2px;
+  font-size: 0.7rem;
   color: #333;
 }
 
@@ -139,8 +166,8 @@ body {
   align-items: center;
   color: #333;
   transform: rotateY(180deg);
-  padding: 15px;
-  font-size: 0.9rem;
+  padding: 8px;
+  font-size: 0.7rem;
   text-align: center;
 }
 
@@ -149,9 +176,8 @@ body {
   background-color: rgb(115, 192, 104);
   color: white;
   text-align: center;
-  padding: 15px;
-  font-size: 0.9rem;
-  border-radius: .5rem;
+  padding: 8px;
+  font-size: 0.8rem;
 }
 
 /* ===== RESPONSIVIDADE ===== */

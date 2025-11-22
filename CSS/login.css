@@ -10,6 +10,41 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+/*===== TOAST FIXO SUPERIOR ESQUERDO =====*/
+#mensagens-validacao {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 999999;
+  pointer-events: none;
+}
+
+.toast-msg {
+  background: #f8d7da;
+  color: #721c24;
+  border-left: 5px solid #c62828;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 260px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.15);
+  opacity: 1;
+  animation: fadeOut 5s forwards;
+  pointer-events: auto; /* para permitir interação se precisar */
+}
+
+/* Animação das mensagens */
+@keyframes fadeOut {
+  0%   { opacity: 1; transform: translateX(0); }
+  80%  { opacity: 1; }
+  100% { opacity: 0; transform: translateX(-20px); }
+}
+
+/*===== FIM DO TOAST =====*/
+
 .container {
   display: flex;
   justify-content: center;
@@ -34,7 +69,7 @@ body {
 
 .btn-fechar-primary:hover {
   transform: scale(1.2);
-  color: rgb(115, 192, 104)
+  color: rgb(115, 192, 104);
 }
 
 .btn-fechar-second {
@@ -59,7 +94,7 @@ body {
   background-color: rgb(247, 255, 246);
   border-radius: 15px;
   width: 1060px;
-  height: 50%;
+  height: 75%;
   justify-content: space-between;
   align-items: center;
   position: relative;
@@ -206,7 +241,7 @@ body {
 }
 
 .form input {
-  height: 45px;
+  height: 35px;
   width: 100%;
   border: none;
   background-color: rgb(236, 248, 248);
@@ -253,18 +288,31 @@ body {
   text-transform: capitalize;
 }
 
-.btn-voltar {
-  background-color: rgb(247, 255, 246);
-  border: 1px solid rgb(115, 192, 104);
-  transition: background-color 0.5s;
+/* Senha */
+#senha-requisitos {
+  margin-top: 5px;
+  font-size: 12px;
+  color: #721c24;
+  line-height: 16px;
 }
 
-.btn-voltar:hover {
-  background-color: #fff;
-  color: rgb(178, 228, 171);
-  transition: background-color 0.5s;
+.senha-req-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px 10px;
 }
 
+.requisito-ok {
+  color: rgb(0, 130, 20);
+  font-weight: bold;
+}
+
+.requisito-erro {
+  color: #c62828;
+  font-weight: bold;
+}
+
+/* === Mudaça de tela === */
 .sign-in-js .first-content .first-column,
 .sign-in-js .first-content .second-column {
   z-index: -1;
@@ -324,7 +372,6 @@ body {
   color: rgb(178, 228, 171);
 }
 
-/* Tooltip lateral */
 .tooltip-info {
   position: absolute;
   top: 50%;
@@ -351,48 +398,7 @@ body {
   pointer-events: auto !important;
 }
 
-/* ===== Mensagens de Erro e Confirmação ===== */
-
-.mensagem {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  min-width: 280px;
-  max-width: 350px;
-  padding: 15px 20px;
-  border-radius: 10px;
-  font-weight: 500;
-  font-size: 14px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  opacity: 0;
-  transform: translateY(-20px);
-  transition: all 0.4s ease;
-  z-index: 9999;
-}
-
-.mensagem.ativa {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.mensagem.sucesso {
-  background-color: #d1f2e0;
-  border-left: 6px solid rgb(115, 192, 104);
-  color: #1b5e20;
-}
-
-.mensagem.erro {
-  background-color: #f8d7da;
-  border-left: 6px solid #dc3545;
-  color: #721c24;
-}
-
-.mensagem i {
-  margin-right: 8px;
-}
-
 /* ===== RESPONSIVIDADE ===== */
-
 @media (max-width: 992px) {
   .first-content,
   .second-content {
@@ -410,22 +416,6 @@ body {
     margin-bottom: 15px;
     order: unset !important;
   }
-
-  .first-content.sign-up-js .first-column {
-    order: 2 !important;
-  }
-
-  .first-content.sign-up-js .second-column {
-    order: 1 !important;
-  }
-
-  .second-content.sign-in-js .first-column {
-    order: 2 !important;
-  }
-
-  .second-content.sign-in-js .second-column {
-    order: 1 !important;
-  }
 }
 
 @media (max-width: 576px) {
@@ -434,30 +424,11 @@ body {
     flex-direction: column !important;
     width: 95% !important;
   }
-
-  .first-content .first-column,
-  .first-content .second-column,
-  .second-content .first-column,
-  .second-content .second-column {
-    width: 100% !important;
-    text-align: center;
-    margin-bottom: 10px;
-  }
 }
 
 @media (max-width: 380px) {
   .first-content,
   .second-content {
-    flex-direction: column !important;
     width: 100% !important;
-  }
-
-  .first-content .first-column,
-  .first-content .second-column,
-  .second-content .first-column,
-  .second-content .second-column {
-    width: 100% !important;
-    text-align: center;
-    margin-bottom: 5px;
   }
 }
