@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perguntas Frequentes – Logado</title>
+  <link rel="stylesheet" href="css/pergFreq.css">
+  <script src="https://kit.fontawesome.com/4ac9fb4be4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <header class="navbar">
+    <div class="logo">AgroProAI</div>
+    <nav>
+      <ul class="menu">
+        <li><a href="logada.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#">FAQ <i class="fa-solid fa-caret-down"></i></a>
+          <ul class="submenu">
+            <li><a href="faleConosco.html">Fale Conosco</a></li>
+            <li><a href="pergFreqLogada.html">Perguntas Frequentes</a></li>
+          </ul>
+        </li>
+        <li><a href="noticias.html">Notícias</a></li>        
+        <li><a href="eventos.html">Eventos</a></li>
+        <li><a href="eventos.html">AI</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+    </nav>
+    <div class="user-info">
+      <span>Olá, Beatriz!</span>
+      <a href="logada.html" class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i></a>
+    </div>
+  </header>
+
+  <div class="header-title">
+    <h1>Perguntas Frequentes</h1>
+  </div>
+
+  <main class="faq-container" id="faq">
+    <div class="search-area">
+      <input type="text" id="searchBar" placeholder="Pesquisar pergunta...">
+    </div>
+    <div class="category-buttons">
+      <button class="cat-btn active" data-cat="login">Login & Cadastro</button>
+      <button class="cat-btn" data-cat="func">Funcionalidades</button>
+      <button class="cat-btn" data-cat="sobre">Sobre o Site</button>
+    </div>
+
+    <!-- Categoria Login & Cadastro -->
+    <section class="faq-category" data-category="login">
+      <h2>Login & Cadastro</h2>
+
+      <div class="faq-item">
+        <button class="faq-question">Como faço para criar uma conta?</button>
+        <div class="faq-answer">
+          <p>Clique em “Cadastrar” na página inicial, preencha seus dados e confirme seu e-mail.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Preciso estar logado para usar o site?</button>
+        <div class="faq-answer">
+          <p>Algumas funcionalidades básicas estão disponíveis sem login, mas para personalização e IA é necessário
+            fazer login.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Esqueci minha senha, o que faço?</button>
+        <div class="faq-answer">
+          <p>Na tela de login clique em “Esqueci senha” e siga os passos para recuperação via e-mail.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Posso usar meu perfil em vários dispositivos?</button>
+        <div class="faq-answer">
+          <p>Sim, basta fazer login com sua conta em qualquer dispositivo com internet.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Como funciona a verificação de e-mail?</button>
+        <div class="faq-answer">
+          <p>Após cadastro enviamos um link para seu e-mail; clique nele para ativar sua conta.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categoria Funcionalidades -->
+    <section class="faq-category" data-category="func" style="display: none;">
+      <h2>Funcionalidades</h2>
+
+      <div class="faq-item">
+        <button class="faq-question">O que posso fazer no site sem login?</button>
+        <div class="faq-answer">
+          <p>Você pode navegar por dicas gerais e notícias do setor agrícola sem estar logado.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Que funcionalidades são exclusivas para usuários logados?</button>
+        <div class="faq-answer">
+          <p>Acesso à IA, perfil personalizado e gráficos dinâmicos são exclusivos após login.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Como faço para usar o módulo de clima?</button>
+        <div class="faq-answer">
+          <p>Após login, acesse “Clima” no menu e informe sua localidade para visualizar a previsão.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Posso exportar relatórios como usuário logado?</button>
+        <div class="faq-answer">
+          <p>Sim, somente contas logadas têm acesso ao botão de exportação de relatórios.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Há versão gratuita deste site?</button>
+        <div class="faq-answer">
+          <p>Sim, existem funcionalidades básicas gratuitas; funcionalidades avançadas requerem login.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categoria Sobre o Site -->
+    <section class="faq-category" data-category="sobre" style="display: none;">
+      <h2>Sobre o Site</h2>
+
+      <div class="faq-item">
+        <button class="faq-question">O que este site oferece?</button>
+        <div class="faq-answer">
+          <p>Oferecemos dicas agrícolas, clima, IA de apoio e notícias para produtores rurais.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Para quem este site foi feito?</button>
+        <div class="faq-answer">
+          <p>Foi desenvolvido para produtores rurais que querem modernizar suas práticas agrícolas.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Quais culturas são atendidas?</button>
+        <div class="faq-answer">
+          <p>Atendemos diversas culturas agrícolas; o perfil permite personalização conforme sua cultura.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Como garantem a confiabilidade das informações?</button>
+        <div class="faq-answer">
+          <p>Usamos fontes confiáveis e atualizadas para alimentar nossos módulos e IA.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">O site é responsivo e acessível?</button>
+        <div class="faq-answer">
+          <p>Sim, foi projetado para funcionar em diferentes dispositivos e níveis tecnológicos.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Beatriz Caroline de Brito dos Reis. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="js/pergFreq.js"></script>
+</body>
+
+</html>

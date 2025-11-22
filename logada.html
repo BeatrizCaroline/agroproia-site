@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Logada</title>
+  <link rel="stylesheet" href="css/homeLog.css">
+  <script src="https://kit.fontawesome.com/4ac9fb4be4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="navbar">
+    <div class="logo">AgroProAI</div>
+    <nav>
+      <ul class="menu">
+        <li><a href="logada.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#">FAQ <i class="fa-solid fa-caret-down"></i></a>
+          <ul class="submenu">
+            <li><a href="faleConosco.html">Fale Conosco</a></li>
+            <li><a href="pergFreqDeslog.html">Perguntas Frequentes</a></li>
+          </ul>
+        </li>
+        <li><a href="noticias.html">Notícias</a></li>        
+        <li><a href="eventos.html">Eventos</a></li>
+        <li><a href="eventos.html">AI</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+    </nav>
+    <div class="user-info">
+      <span>Olá, Beatriz!</span>
+      <a href="index.html" class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i></a>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="main-content">
+    <!-- CARROSSEL -->
+    <section class="carrossel">
+      <div class="slides">
+        <div class="slide active">
+          <img src="https://www.abdi.com.br/wp-content/uploads/2023/07/Banners_do_Site_-_Projetos_Agro_4.0_-_Banner__1_-2.png" alt="Banner 1">
+        </div>
+        <div class="slide">
+          <img src="https://img.freepik.com/vetores-premium/campo-de-agricultura-abstrato-ou-fundo-de-banner-de-cartao-de-fazenda-vinha-padrao-de-vale-paisagem-rural-modelo-de-panorama-horizontal-ecologico-cenario-de-natureza-organico-design-de-layout-de-cabecalho-de-pagina-da-web-verde_534430-1190.jpg" alt="Banner 2">
+        </div>
+        <div class="slide">
+          <img src="https://www.pmp.patrocinio.mg.gov.br/wp-content/uploads/2025/08/WhatsApp-Image-2025-08-25-at-14.32.57-e1756149327695.jpeg" alt="Banner 3">
+        </div>
+      </div>
+      <div class="carrossel-controls">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </section>
+
+    <!-- CLIMA -->
+<section class="clima">
+  <h2>Previsão do Tempo</h2>
+  <div class="clima-container">
+    <input type="text" id="search" placeholder="Digite sua cidade..." autocomplete="off" />
+    <button id="btnLimpar" title="Limpar busca">&times;</button>
+    <button id="btnBuscar" title="Buscar"><i class="fa-solid fa-magnifying-glass"></i></button>
+    <ul id="autocomplete-list" class="autocomplete-list"></ul>
+  </div>
+  <div id="resultado-clima" class="resultado-clima">
+    <p>Pesquise uma região para visualizar as condições climáticas.</p>
+  </div>
+</section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2025 Beatriz Caroline de Brito dos Reis. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="js/homeLog.js"></script>
+</body>
+
+</html>

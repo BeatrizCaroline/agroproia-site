@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fale Conosco — AgroProAI</title>
+  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/faleConosco.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">AgroProAI</div>
+    <nav>
+      <ul class="menu">
+        <li><a href="logada.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#">FAQ <i class="fa-solid fa-caret-down"></i></a>
+          <ul class="submenu">
+            <li><a href="faleConosco.html">Fale Conosco</a></li>
+            <li><a href="pergFreqLogada.html">Perguntas Frequentes</a></li>
+          </ul>
+        </li>
+        <li><a href="noticias.html">Notícias</a></li>
+        <li><a href="eventos.html">Eventos</a></li>
+        <li><a href="eventos.html">AI</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+    </nav>
+    <div class="user-info">
+      <span>Olá, Beatriz!</span>
+      <a href="index.html" class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i></a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Fale Conosco</h1>
+      <p>Tem alguma dúvida, sugestão ou quer reportar um problema? Envie sua mensagem abaixo — responderemos em até 48 horas.</p>
+    </section>
+
+    <section class="contact-card">
+      <form id="contactForm" class="contact-form" novalidate>
+        <div class="form-row">
+          <label for="name">Nome completo</label>
+          <input type="text" id="name" name="name" required placeholder="Seu nome" />
+        </div>
+
+        <div class="form-row">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" required placeholder="seu@exemplo.com" />
+        </div>
+
+        <div class="form-row">
+          <label for="subject">Assunto</label>
+          <select id="subject" name="subject" required>
+            <option value="" disabled selected>-- selecione --</option>
+            <option>Suporte</option>
+            <option>Parceria</option>
+            <option>Feedback</option>
+            <option>Outros</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="attachment">Anexo (opcional)</label>
+          <input type="file" id="attachment" name="attachment" accept=".png,.jpg,.jpeg,.pdf" />
+          <small class="muted">PNG/JPG/PDF — máximo 5MB</small>
+        </div>
+
+        <div class="form-row full-width">
+          <label for="message">Mensagem</label>
+          <textarea id="message" name="message" rows="6" required placeholder="Descreva sua dúvida ou sugestão..."></textarea>
+        </div>
+
+        <div class="form-actions">
+          <div class="checkbox-row">
+            <input type="checkbox" id="consent" name="consent" required />
+            <label for="consent">Concordo em ser contatado por e-mail sobre minha solicitação.</label>
+          </div>
+          <button type="submit" class="btn primary">Enviar mensagem</button>
+          <button type="reset" class="btn ghost">Limpar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Beatriz Caroline de Brito dos Reis. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
