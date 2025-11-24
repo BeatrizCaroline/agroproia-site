@@ -21,7 +21,7 @@ Com uma programação exclusiva de conteúdo, o Agrishow Labs promoveu na tarde 
 
 ---
 
-Fonte: digital.agrishow.com.br/`,
+Fonte: digital.agrishow.com.br`,
       topics: ["sustentavel", "inovacao"],
       likes: 20,
       userLikes: [],
@@ -35,8 +35,37 @@ Fonte: digital.agrishow.com.br/`,
     {
       id: 2,
       title: "Mercado Agrícola em Alta",
-      banner: "https://fia.com.br/wp-content/uploads/2022/06/commodities-agricolas-o-que-sao-mercado-beneficios-de-investir.jpg",
-      body: "Análise do mercado agrícola mostrando crescimento nos últimos meses.",
+      banner: "https://www.mg.gov.br/sites/default/files/styles/w/public/noticias/2025/noticias/imagem_capa/exportacao-cafe.jpeg?itok=uT0iSe68",
+      body: `As exportações do agronegócio mineiro alcançaram US$ 16,4 bilhões no acumulado de janeiro a outubro de 2025, com crescimento de 13% em relação ao mesmo período do ano passado. O café segue como o pilar das cadeias produtivas que mais exportam, seguido pelo complexo soja e sucroalcooleiro, carnes e produtos florestais. Outros segmentos, como lácteos processados e preparados alimentícios, também ampliaram a base exportadora estadual.
+
+Já o volume embarcado somou 14 milhões de toneladas, com redução de 6,5%, na comparação com os meses de janeiro a outubro do ano anterior. Minas é o terceiro estado que mais exporta produtos do agro, atrás apenas de Mato Grosso e São Paulo, e responde por quase 13% da receita do agro nacional. Ao todo 633 diferentes produtos agropecuários mineiros foram enviados para 175 países.
+
+Resultado mensal
+Ao ser analisado separadamente, o mês de outubro alcançou US$ 1,8 bilhão e volume de 1,2 milhão de toneladas, reforçando a tendência observada no acumulado do ano de maior diversificação, aumento da competitividade e estabilidade no fluxo exportador, apesar das oscilações em mercados específicos. O desempenho se destacou como o melhor mês de outubro já registrado na série histórica mineira.
+A valorização dos preços das commodities se mantém como um dos principais motivos para o bom desempenho das exportações. Além disso, os produtos do agro mineiro estão ampliando sua presença em novos mercados, contribuindo para os resultados.
+
+Segundo a assessora técnica da Secretaria de Agricultura, Pecuária e Abastecimento (Seapa), Manoela Teixeira, houve expansão consistente em praticamente todos os grandes mercados, com destaque para as regiões Europa, Ásia, América do Sul e Oriente Médio. “Mesmo diante da redução das compras de alguns produtos pelos Estados Unidos, o agro mineiro demonstrou capacidade de reação rápida, redirecionando embarques para novos mercados”, avalia.
+No período, 15 novos países iniciaram as importações dos produtos do agro de Minas, a exemplo da Bósnia, Malta, Tonga, Mongólia e Botsuana, marcando a maior diversificação de destinos da série histórica. “Essa ampliação da base de clientes é fundamental para reduzir os riscos associados à concentração geográfica”, complementa a assessora técnica Manoela Teixeira.
+
+Café
+Minas Gerais responde, sozinho, por cerca de 70% das exportações brasileiras de café, o que confirma sua liderança absoluta. O carro-chefe da pauta exportadora mantém suas cotações em alta desde o ano passado, devido à baixa oferta no mercado internacional e ao aumento do consumo mundial.
+O valor registrado com as exportações mineiras de café representou pouco mais da metade da receita do agro mineiro, alcançando US$ 8,9 bilhões e 22 milhões de sacas.
+
+Soja
+O complexo soja (grãos, óleo e farelo) registrou US$ 2,8 bilhões com o embarque de quase 7 milhões de toneladas e queda aproximada de 13% e 4% respectivamente.
+
+Sucroalcooleiro
+O volume chegou a 3,9 milhões de toneladas, totalizando US$ 1,7 bilhão com queda de 19,8% na receita e 10,9% na quantidade embarcada.
+
+Carnes
+A receita do setor de carnes (bovina, suína e frango) alcançou US$ 1,5 bilhão no período, alta de 7% em relação ao mesmo período de 2024. Já o volume total ficou em 419 mil toneladas.
+
+Produtos Florestais
+Os produtos florestais (celulose, madeira e papel) alcançaram aproximadamente US$ 814 milhões (-13,8%). O volume embarcado ficou em 1,4 milhão de toneladas (-0,8%).
+
+---
+
+Fonte: agricultura.mg.gov.br`,
       topics: ["mercado", "tradicional"],
       likes: 18,
       userLikes: [],
