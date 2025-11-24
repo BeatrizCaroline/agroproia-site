@@ -3,12 +3,19 @@
   --green-300: rgb(178, 228, 171);
   --green-50: rgb(247, 255, 246);
   --text: #1b1b1b;
-  --shadow: 0 6px 18px rgba(20,20,20,0.06);
+  --shadow: 0 6px 18px rgba(20, 20, 20, 0.06);
   font-family: "Segoe UI", Roboto, sans-serif;
 }
 
 /* Base */
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  height: 100%;
+}
 body {
   background: var(--green-50);
   color: var(--text);
@@ -18,72 +25,156 @@ body {
   flex-direction: column;
 }
 
-/* Cabeçalho */
+/* HEADER */
 .navbar {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  background: var(--green-700);
-  padding: 16px 32px;
-  color: #fff;
-  font-weight: 700;
+  align-items: center;
+  background-color: rgb(115, 192, 104);
+  color: white;
+  padding: 10px
 }
-.logo { font-size: 1.3rem; color: #fff; font-weight: 700; }
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.1;
+  margin: 0;
+}
+
 .menu {
   list-style: none;
   display: flex;
-  gap: 80px; /* espaçamento maior */
-}
-.menu a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 700;
+  gap: 50px;
+  position: relative;
+  z-index: 10;
+  margin: 0;
+  padding: 0;
 }
 
-/* Submenu FAQ */
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.menu li {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
 .submenu {
   display: none;
   position: absolute;
-  background: #fff;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  color: #333;
   list-style: none;
-  padding: 8px;
+  padding: 10px 0;
   border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  min-width: 180px;
 }
-.submenu a {
-  color: var(--green-700);
-  font-weight: 700;
-  display: block;
-  padding: 6px 10px;
-}
-.submenu a:hover {
-  background: rgba(178, 228, 171, 0.2);
-}
-.dropdown:hover .submenu { display: block; }
 
-.user-info {
+.submenu li a {
+  color: #333;
+  display: block;
+  padding: 8px 15px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown:hover .submenu {
+  display: block;
+}
+
+.submenu li a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Usuário */
+.user-icon-wrapper {
+  position: relative;
+  cursor: pointer;
+  color: white;
+  font-size: 1rem;
+  user-select: none;
+  outline: none;
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 5px;
   display: flex;
   align-items: center;
-  gap: 10px;
-  color: #fff;
-  font-weight: 700;
+  justify-content: center;
+  background-color: transparent;
+  transition: background-color 0.3s, border-color 0.3s;
 }
-.logout-btn { color: #fff; }
+
+.user-icon-wrapper:hover,
+.user-icon-wrapper:focus {
+  background-color: rgb(205, 230, 212);
+  border-color: rgb(205, 230, 212);
+  color: white;
+}
+
+.user-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 150%;
+  background-color: white;
+  color: #333;
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  min-width: 80px;
+  z-index: 200;
+}
+
+.user-menu li a {
+  display: block;
+  padding: 4px 10px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.user-menu li a:hover {
+  background-color: #f0f0f0;
+}
 
 /* Conteúdo */
-.container { 
-  max-width: 1200px; /* modal maior */
-  margin: 40px auto;
+.container {
+  max-width: 1200px;
+  margin: 40px auto 40px auto;
   padding: 0 20px;
-  flex: 1;
+  flex-grow: 1;
 }
-.hero h1 { color: var(--green-700); margin-bottom: 10px; }
-.hero { margin-bottom: 60px; }
 
+.hero h1 {
+  color: var(--green-700);
+  margin-bottom: 10px;
+}
+
+.hero {
+  margin-bottom: 30px;
+}
+
+/* Cartão contato */
 .contact-card {
   background: #fff;
   border-radius: 10px;
   box-shadow: var(--shadow);
-  padding: 40px; /* mais espaço interno */
+  padding: 40px;
 }
 
 /* Formulário */
@@ -92,11 +183,24 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
-.form-row { display: flex; flex-direction: column; }
-.full-width { grid-column: 1 / -1; text-align: center; } /* centraliza o campo mensagem */
-textarea#message { width: 80%; margin: 0 auto; resize: vertical; }
+.form-row {
+  display: flex;
+  flex-direction: column;
+}
+.full-width {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+textarea#message {
+  width: 80%;
+  margin: 0 auto;
+  resize: vertical;
+}
 
-.form-row label { margin-bottom: 5px; font-weight: 700; }
+.form-row label {
+  margin-bottom: 5px;
+  font-weight: 700;
+}
 .form-row input,
 .form-row select,
 .form-row textarea {
@@ -106,7 +210,6 @@ textarea#message { width: 80%; margin: 0 auto; resize: vertical; }
   font-size: 1rem;
 }
 
-/* bordas ficam verdes ao clicar */
 .form-row input:focus,
 .form-row select:focus,
 .form-row textarea:focus {
@@ -115,10 +218,9 @@ textarea#message { width: 80%; margin: 0 auto; resize: vertical; }
   outline: none;
 }
 
-/* botão escolher arquivo verde claro */
 input[type="file"]::-webkit-file-upload-button {
   background: var(--green-300);
-  color: #848484;
+  color: #658a65;
   border: none;
   padding: 8px 14px;
   border-radius: 6px;
@@ -153,8 +255,14 @@ input[type="file"]::-webkit-file-upload-button:hover {
   font-weight: 700;
   cursor: pointer;
 }
-.btn.primary { background: var(--green-700); color: #fff; }
-.btn.ghost { background: #fff; border: 1px solid #ccc; }
+.btn.primary {
+  background: var(--green-700);
+  color: #fff;
+}
+.btn.ghost {
+  background: #fff;
+  border: 1px solid #ccc;
+}
 
 .form-feedback {
   margin-top: 12px;
@@ -164,28 +272,34 @@ input[type="file"]::-webkit-file-upload-button:hover {
   font-weight: 700;
 }
 
-/* Rodapé fixo */
+/* Rodapé */
 .footer {
   background: var(--green-700);
   color: #fff;
   text-align: center;
-  padding: 16px;
-  font-weight: 700;
-  position: fixed;
-  bottom: 0;
-  left: 0;
+  padding: 8px;
   width: 100%;
 }
 
 /* Responsividade */
 @media (max-width: 992px) {
-  .contact-form { grid-template-columns: 1fr; }
-  textarea#message { width: 100%; }
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+  textarea#message {
+    width: 100%;
+  }
 }
 @media (max-width: 576px) {
-  .menu { display: none; }
-  .logo { font-size: 1.1rem; }
+  .menu {
+    display: none;
+  }
+  .logo {
+    font-size: 1.1rem;
+  }
 }
 @media (max-width: 380px) {
-  .btn { padding: 8px 12px; }
+  .btn {
+    padding: 8px 12px;
+  }
 }

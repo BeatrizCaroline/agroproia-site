@@ -11,6 +11,7 @@
 
 <body>
 
+ <!-- HEADER -->
   <header class="navbar">
     <div class="logo">AgroProAI</div>
     <nav>
@@ -25,13 +26,16 @@
         </li>
         <li><a href="noticias.html">Notícias</a></li>        
         <li><a href="eventos.html">Eventos</a></li>
-        <li><a href="eventos.html">AI</a></li>
+        <li><a href="ai.html">AI</a></li>
         <li><a href="dashboard.html">Dashboard</a></li>
       </ul>
     </nav>
-    <div class="user-info">
-      <span>Olá, Beatriz!</span>
-      <a href="logada.html" class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i></a>
+    <div class="user-icon-wrapper" tabindex="0">
+      <i class="fa-solid fa-user user-icon"></i>
+      <ul class="user-menu">
+        <li><a href="perfil.html">Perfil</a></li>
+        <li><a href="index.html">Sair</a></li>
+      </ul>
     </div>
   </header>
 
@@ -176,6 +180,7 @@
   </footer>
 
   <script src="js/pergFreq.js"></script>
+  <script src="js/homeLog.js"></script>
 </body>
 
 </html>

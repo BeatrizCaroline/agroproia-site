@@ -1,3 +1,27 @@
+
+document.addEventListener('DOMContentLoaded', () => {
+  const userIconWrapper = document.querySelector('.user-icon-wrapper');
+  const userMenu = document.querySelector('.user-menu');
+
+  userIconWrapper.addEventListener('click', (e) => {
+    e.stopPropagation();
+    userMenu.style.display = userMenu.style.display === 'block' ? 'none' : 'block';
+  });
+
+  // Fechar menu ao clicar fora
+  document.addEventListener('click', () => {
+    userMenu.style.display = 'none';
+  });
+
+  // Permite abrir/fechar (Enter/Space)
+  userIconWrapper.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      userMenu.style.display = userMenu.style.display === 'block' ? 'none' : 'block';
+    }
+  });
+});
+
 // --- Carrossel Automático ---
 let slideIndex = 0;
 const slides = document.querySelectorAll(".slide");

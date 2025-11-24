@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - AgroProAI</title>
+    <script src="https://kit.fontawesome.com/4ac9fb4be4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/perfil.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <!-- HEADER -->
+    <header class="navbar">
+      <div class="logo">AgroProAI</div>
+      <nav>
+        <ul class="menu">
+          <li><a href="logada.html">Home</a></li>
+          <li class="dropdown">
+            <a href="#">FAQ <i class="fa-solid fa-caret-down"></i></a>
+            <ul class="submenu">
+              <li><a href="faleConosco.html">Fale Conosco</a></li>
+              <li><a href="pergFreqLogada.html">Perguntas Frequentes</a></li>
+            </ul>
+          </li>
+          <li><a href="noticias.html">Notícias</a></li>
+          <li><a href="eventos.html">Eventos</a></li>
+          <li><a href="ai.html">AI</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </nav>
+      <div class="user-icon-wrapper" tabindex="0">
+        <i class="fa-solid fa-user user-icon"></i>
+        <ul class="user-menu">
+          <li><a href="perfil.html">Perfil</a></li>
+          <li><a href="index.html">Sair</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <h1 class="page-title">Configurações do Perfil</h1>
+        
+        <div class="profile-container">
+            <div class="profile-card">
+                <div class="profile-header">
+                    <div class="profile-avatar">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="profile-info">
+                        <h2 id="profile-name">AgroProAI-Admin</h2>
+                        <p id="profile-email">admin@agroproai.com</p>
+                        <p id="profile-role">Admin-AgroProAI</p>
+                    </div>
+                </div>
+
+                <form id="profile-form">
+                    <div class="form-group">
+                        <label for="nome" class="required">Nome Completo</label>
+                        <input type="text" id="nome" name="nome" class="form-control" value="AgroProAI-Admin" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="required">E-mail</label>
+                        <input type="email" id="email" name="email" class="form-control" value="admin@agroproai.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" name="telefone" class="form-control" placeholder="(00) 00000-0000">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="endereco">Endereço</label>
+                        <input type="text" id="endereco" name="endereco" class="form-control" placeholder="Rua, número, bairro">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cidade">Cidade</label>
+                        <input type="text" id="cidade" name="cidade" class="form-control" placeholder="Sua cidade">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="estado">Estado</label>
+                        <select id="estado" name="estado" class="form-control">
+                            <option value="">Selecione um estado</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="perfilAgricultor" class="required">Perfil de Agricultor</label>
+                        <select id="perfilAgricultor" name="perfilAgricultor" class="form-control" required>
+                            <option value="adminAgroProAI" selected>Admin-AgroProAI</option>
+                            <option value="tradicional">Tradicional</option>
+                            <option value="empreendedor">Empreendedor</option>
+                            <option value="tecnologico">Tecnológico</option>
+                            <option value="sustentavel">Sustentável</option>
+                            <option value="familiar">Familiar</option>
+                            <option value="corporativo">Corporativo</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="biografia">Biografia</label>
+                        <textarea id="biografia" name="biografia" class="form-control" rows="4" placeholder="Conte um pouco sobre você e sua experiência com agricultura..."></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+                        <button type="button" class="btn btn-secondary" id="btn-cancelar">Cancelar</button>
+                        <button type="button" class="btn btn-danger" id="btn-excluir-conta">Excluir Conta</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="profile-card">
+                <h3>Alterar Senha</h3>
+                <form id="password-form">
+                    <div class="form-group">
+                        <label for="senha-atual" class="required">Senha Atual</label>
+                        <input type="password" id="senha-atual" name="senha-atual" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nova-senha" class="required">Nova Senha</label>
+                        <input type="password" id="nova-senha" name="nova-senha" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmar-senha" class="required">Confirmar Nova Senha</label>
+                        <input type="password" id="confirmar-senha" name="confirmar-senha" class="form-control" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Alterar Senha</button>
+                </form>
+
+                <div class="profile-stats">
+                    <div class="stat-card">
+                        <div class="stat-value">15</div>
+                        <div class="stat-label">Consultas AI</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">8</div>
+                        <div class="stat-label">Eventos</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">3</div>
+                        <div class="stat-label">Anos</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- MODAL DE CONFIRMAÇÃO -->
+    <div class="modal" id="confirm-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Confirmar Exclusão</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <p>Tem certeza que deseja excluir sua conta? Esta ação não pode ser desfeita.</p>
+            <div class="modal-footer">
+                <button class="btn btn-danger" id="confirm-excluir">Sim, Excluir</button>
+                <button class="btn btn-secondary" id="cancel-excluir">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2025 Beatriz Caroline de Brito dos Reis. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/perfil.js"></script>
+    <script src="js/homeLog.js"></script>
+</body>
+</html>

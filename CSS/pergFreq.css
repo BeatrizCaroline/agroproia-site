@@ -25,41 +25,44 @@ body {
   font-size: 2rem;
 }
 
+/* HEADER */
 .navbar {
-  width: 100%;
-  background-color: rgb(115, 192, 104);
-  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  font-weight: bold;
+  background-color: rgb(115, 192, 104);
+  color: white;
+  padding: 10px
 }
 
 .logo {
+  font-size: 1.5rem;
   font-weight: bold;
-  font-size: 1.3rem;
+  line-height: 1.1;
+  margin: 0;
 }
 
 .menu {
   list-style: none;
   display: flex;
-  gap: 40px;
+  gap: 50px;
+  position: relative;
+  z-index: 10;
+  margin: 0;
+  padding: 0;
 }
 
 .menu a {
-  color: white;
   text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
+  color: white;
+  font-weight: 700;
+  line-height: 1.1;
 }
 
-.menu a:hover {
-  text-decoration: underline;
-}
-
-.dropdown {
+.menu li {
   position: relative;
+  margin: 0;
+  padding: 0;
 }
 
 .submenu {
@@ -68,58 +71,85 @@ body {
   top: 100%;
   left: 0;
   background-color: white;
+  color: #333;
   list-style: none;
-  padding: 8px 0;
-  border: 1px solid rgba(0,0,0,0.1);
-  border-radius: 4px;
+  padding: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 100;
   min-width: 180px;
 }
 
-.submenu li {
-  text-align: left;
-}
-
-.submenu a {
+.submenu li a {
+  color: #333;
   display: block;
-  padding: 10px 15px;
-  color: rgb(115, 192, 104);
-  text-decoration: none;
-  font-weight: bold;
+  padding: 8px 15px;
 }
 
-.submenu a:hover {
-  background-color: rgba(178, 228, 171, 0.2);
+.dropdown {
+  position: relative;
 }
 
-.dropdown > a {
+.dropdown:hover .submenu {
+  display: block;
+}
+
+.submenu li a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Usuário */
+.user-icon-wrapper {
+  position: relative;
   cursor: pointer;
-}
-
-.dropdown.open .submenu {
-  display: block;
-}
-
-.user-info {
+  color: white;
+  font-size: 1rem;
+  user-select: none;
+  outline: none;
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 5px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+  background-color: transparent;
+  transition: background-color 0.3s, border-color 0.3s;
 }
 
-.user-info span {
+.user-icon-wrapper:hover,
+.user-icon-wrapper:focus {
+  background-color: rgb(205, 230, 212);
+  border-color: rgb(205, 230, 212);
   color: white;
-  font-weight: bold;
 }
 
-.logout-btn {
-  color: white;
-  font-weight: bold;
+.user-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 150%;
+  background-color: white;
+  color: #333;
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  min-width: 80px;
+  z-index: 200;
+}
+
+.user-menu li a {
+  display: block;
+  padding: 4px 10px;
+  color: #333;
   text-decoration: none;
-  font-size: 1.1rem;
-  transition: color 0.3s;
+  font-weight: 600;
+  font-size: 1rem;
 }
 
-.logout-btn:hover {
-  color: #f1f1f1;
+.user-menu li a:hover {
+  background-color: #f0f0f0;
 }
 
 .search-area {

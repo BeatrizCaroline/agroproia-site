@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnLogin = document.getElementById("btn-login");
   const msgContainer = document.getElementById("mensagens-validacao");
 
-  // Usuários fictícios (perfil não é necessário no login)
+  // Usuários fictícios
   const usuarios = [
     { email: "tradicional@email.com", senha: "Trad123!" },
     { email: "empreendedor@email.com", senha: "Empre456@" },

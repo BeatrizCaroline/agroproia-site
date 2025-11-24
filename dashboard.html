@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - AgroProAI</title>
+    <link rel="stylesheet" href="CSS/dashboard.css" />
+    <script
+      src="https://kit.fontawesome.com/4ac9fb4be4.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  </head>
+  <body>
+
+   <!-- HEADER -->
+    <header class="navbar">
+      <div class="logo">AgroProAI</div>
+      <nav>
+        <ul class="menu">
+          <li><a href="logada.html">Home</a></li>
+          <li class="dropdown">
+            <a href="#">FAQ <i class="fa-solid fa-caret-down"></i></a>
+            <ul class="submenu">
+              <li><a href="faleConosco.html">Fale Conosco</a></li>
+              <li><a href="pergFreqLogada.html">Perguntas Frequentes</a></li>
+            </ul>
+          </li>
+          <li><a href="noticias.html">Notícias</a></li>
+          <li><a href="eventos.html">Eventos</a></li>
+          <li><a href="ai.html">AI</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </nav>
+      <div class="user-icon-wrapper" tabindex="0">
+        <i class="fa-solid fa-user user-icon"></i>
+        <ul class="user-menu">
+          <li><a href="perfil.html">Perfil</a></li>
+          <li><a href="index.html">Sair</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="dashboard-container">
+      <div class="dashboard-header">
+        <div>
+          <h1 class="dashboard-title">Dashboard AgroProAI</h1>
+          <p class="dashboard-subtitle">
+            Baseado em respostas de
+            <span id="total-respondentes">40</span> agricultores
+          </p>
+        </div>
+        <button class="btn-participar" id="btn-abrir-modal">
+          <i class="fa-solid fa-clipboard-list"></i> Participar da Pesquisa
+        </button>
+      </div>
+
+      <!-- Cards de Métricas -->
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <h3>Produtividade Média</h3>
+          <p class="metric-value" id="produtividade-media">0 kg/ha</p>
+          <span class="metric-trend positive" id="trend-produtividade"
+            >+0%</span
+          >
+        </div>
+        <div class="metric-card">
+          <h3>Problemas Identificados</h3>
+          <p class="metric-value" id="total-problemas">0</p>
+          <span class="metric-trend neutral" id="trend-problemas"
+            >Por cultura</span
+          >
+        </div>
+        <div class="metric-card">
+          <h3>Satisfação com Solo</h3>
+          <p class="metric-value" id="satisfacao-solo">0%</p>
+          <span class="metric-trend positive" id="trend-solo">Avaliação</span>
+        </div>
+        <div class="metric-card">
+          <h3>Uso de Tecnologia</h3>
+          <p class="metric-value" id="uso-tecnologia">0%</p>
+          <span class="metric-trend positive" id="trend-tecnologia"
+            >Adoção</span
+          >
+        </div>
+      </div>
+
+      <!-- Gráficos -->
+      <div class="charts-grid">
+        <div class="chart-card">
+          <h3>Produtividade por Cultura</h3>
+          <div id="produtividade-cultura"></div>
+        </div>
+        <div class="chart-card">
+          <h3>Problemas Mais Comuns</h3>
+          <div id="problemas-comuns"></div>
+        </div>
+        <div class="chart-card">
+          <h3>Distribuição por Região</h3>
+          <div id="distribuicao-regiao"></div>
+        </div>
+        <div class="chart-card">
+          <h3>Tipo de Solo dos Respondentes</h3>
+          <div id="tipo-solo"></div>
+        </div>
+      </div>
+
+      <!-- Recomendações da IA -->
+      <div class="recommendations-card">
+        <h3>
+          <i class="fa-solid fa-robot"></i> Recomendações da IA Baseadas nas
+          Respostas
+        </h3>
+        <div id="recomendacoes-lista">
+          <div class="recomendacao-item">
+            <strong>Soja:</strong> 65% dos produtores relatam problemas com
+            pragas. Recomenda-se monitoramento intensivo.
+          </div>
+          <div class="recomendacao-item">
+            <strong>Região Sul:</strong> Maior satisfação com o solo (78%).
+            Compartilhe suas práticas!
+          </div>
+          <div class="recomendacao-item">
+            <strong>Tecnologia:</strong> 42% usam tecnologia agrícola. Há espaço
+            para melhorias na digitalização.
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Modal do Formulário -->
+    <div id="modal-formulario" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2><i class="fa-solid fa-clipboard-list"></i> Pesquisa AgroProAI</h2>
+          <span class="close-modal">&times;</span>
+        </div>
+        <div class="modal-body">
+          <form id="form-pesquisa">
+            <div class="form-group">
+              <label for="cultura">Cultura Principal:</label>
+              <select id="cultura" name="cultura" required>
+                <option value="">Selecione...</option>
+                <option value="Soja">Soja</option>
+                <option value="Milho">Milho</option>
+                <option value="Café">Café</option>
+                <option value="Cana-de-açúcar">Cana-de-açúcar</option>
+                <option value="Algodão">Algodão</option>
+                <option value="Trigo">Trigo</option>
+                <option value="Arroz">Arroz</option>
+                <option value="Feijão">Feijão</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="produtividade">Produtividade (kg/ha):</label>
+              <input
+                type="number"
+                id="produtividade"
+                name="produtividade"
+                min="0"
+                step="0.1"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="regiao">Região:</label>
+              <select id="regiao" name="regiao" required>
+                <option value="">Selecione...</option>
+                <option value="Sul">Sul</option>
+                <option value="Sudeste">Sudeste</option>
+                <option value="Centro-Oeste">Centro-Oeste</option>
+                <option value="Nordeste">Nordeste</option>
+                <option value="Norte">Norte</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="tipo_solo">Tipo de Solo:</label>
+              <select id="tipo_solo" name="tipo_solo" required>
+                <option value="">Selecione...</option>
+                <option value="Argiloso">Argiloso</option>
+                <option value="Arenoso">Arenoso</option>
+                <option value="Misto">Misto</option>
+                <option value="Humoso">Humoso</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="problemas"
+                >Problemas Enfrentados (múltipla escolha):</label
+              >
+              <div class="checkbox-group">
+                <label
+                  ><input type="checkbox" name="problemas" value="Pragas" />
+                  Pragas</label
+                >
+                <label
+                  ><input type="checkbox" name="problemas" value="Doenças" />
+                  Doenças</label
+                >
+                <label
+                  ><input type="checkbox" name="problemas" value="Seca" />
+                  Seca</label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    name="problemas"
+                    value="Excesso de Chuva"
+                  />
+                  Excesso de Chuva</label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    name="problemas"
+                    value="Fertilidade do Solo"
+                  />
+                  Fertilidade do Solo</label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    name="problemas"
+                    value="Custos Elevados"
+                  />
+                  Custos Elevados</label
+                >
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="satisfacao_solo">Satisfação com o Solo (1-10):</label>
+              <div class="range-container">
+                <input
+                  type="range"
+                  id="satisfacao_solo"
+                  name="satisfacao_solo"
+                  min="1"
+                  max="10"
+                  value="5"
+                  required
+                />
+                <span id="satisfacao-value">5</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="uso_tecnologia">Utiliza Tecnologia Agrícola?</label>
+              <select id="uso_tecnologia" name="uso_tecnologia" required>
+                <option value="">Selecione...</option>
+                <option value="Sim">Sim</option>
+                <option value="Não">Não</option>
+                <option value="Parcialmente">Parcialmente</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="area_plantio">Área de Plantio (hectares):</label>
+              <input
+                type="number"
+                id="area_plantio"
+                name="area_plantio"
+                min="0"
+                step="0.1"
+                required
+              />
+            </div>
+
+            <div class="form-buttons">
+              <button type="button" class="btn-cancelar" id="btn-cancelar">
+                Cancelar
+              </button>
+              <button type="submit" class="btn-submit">
+                <i class="fa-solid fa-paper-plane"></i> Enviar Resposta
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>
+        &copy; 2025 Beatriz Caroline de Brito dos Reis. Todos os direitos
+        reservados.
+      </p>
+    </footer>
+
+    <script src="JS/dashboard.js"></script>
+  </body>
+</html>
