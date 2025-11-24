@@ -110,16 +110,19 @@ function criarGraficos() {
     const counts = problemas.map(problema => problemasCount[problema]);
     
     Plotly.newPlot('problemas-comuns', [{
-        x: counts,
-        y: problemas,
-        type: 'bar',
-        orientation: 'h',
-        marker: { color: '#e74c3c' }
-    }], {
-        title: 'Problemas Mais Relatados',
-        xaxis: { title: 'Número de Ocorrências' },
-        yaxis: { title: 'Problemas' }
-    });
+  x: counts,
+  y: problemas,
+  type: 'bar',
+  orientation: 'h',
+  marker: { color: '#e74c3c' }
+}], { 
+  title: 'Problemas Mais Relatados',
+  xaxis: { title: 'Número de Ocorrências' },
+  yaxis: { title: 'Problemas' },
+  margin: {
+    l: 180
+  }
+});
 
     // Gráfico de distribuição por região
     const regioesCount = {};
