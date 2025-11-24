@@ -140,21 +140,29 @@
       aria-labelledby="modalTitle"
     >
       <div class="modal-content">
-        <button id="closeModal" aria-label="Fechar modal">&times;</button>
-        <h2 id="modalTitle"></h2>
-        <img id="modalBanner" alt="" />
-        <p id="modalBody"></p>
+        <div class="modal-header">
+          <h2 id="modalTitle"></h2>
+          <button id="closeModal" class="close-btn" aria-label="Fechar modal">
+            &times;
+          </button>
+        </div>
+        <div class="modal-banner-container">
+          <img id="modalBanner" alt="" />
+        </div>
+        <div class="modal-body-content">
+          <p id="modalBody"></p>
 
-        <section id="commentsSection">
-          <h3>Comentários</h3>
-          <div id="commentsList"></div>
-          <textarea
-            id="commentInput"
-            placeholder="Escreva um comentário..."
-            rows="3"
-          ></textarea>
-          <button id="btnAddComment">Comentar</button>
-        </section>
+          <section id="commentsSection">
+            <h3>Comentários</h3>
+            <div id="commentsList"></div>
+            <textarea
+              id="commentInput"
+              placeholder="Escreva um comentário..."
+              rows="3"
+            ></textarea>
+            <button id="btnAddComment">Comentar</button>
+          </section>
+        </div>
       </div>
     </div>
 
@@ -167,9 +175,17 @@
       aria-modal="true"
       aria-labelledby="modalEditTitle"
     >
-      <div class="modal-content">
-        <button id="closeEditModal" aria-label="Fechar modal">&times;</button>
-        <h2 id="modalEditTitle">Cadastrar Notícia</h2>
+      <div class="modal-content large-modal">
+        <div class="modal-header">
+          <h2 id="modalEditTitle">Cadastrar Notícia</h2>
+          <button
+            id="closeEditModal"
+            class="close-btn"
+            aria-label="Fechar modal"
+          >
+            &times;
+          </button>
+        </div>
         <form id="formNews">
           <label for="newsTitle">
             Título:

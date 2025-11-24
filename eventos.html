@@ -135,62 +135,68 @@
       aria-labelledby="modalTitle"
     >
       <div class="modal-content">
-        <button id="closeModal" class="close-btn" aria-label="Fechar modal">&times;</button>
-        <h2 id="modalTitle"></h2>
-        <img id="modalBanner" alt="" />
-        <div class="event-details">
-          <div class="event-info">
-            <div class="info-item">
-              <i class="fa-solid fa-calendar"></i>
-              <span id="modalDate"></span>
+        <div class="modal-header">
+          <h2 id="modalTitle"></h2>
+          <button id="closeModal" class="close-btn" aria-label="Fechar modal">&times;</button>
+        </div>
+        <div class="modal-banner-container">
+          <img id="modalBanner" alt="" />
+        </div>
+        <div class="modal-body-content">
+          <div class="event-details">
+            <div class="event-info">
+              <div class="info-item">
+                <i class="fa-solid fa-calendar"></i>
+                <span id="modalDate"></span>
+              </div>
+              <div class="info-item">
+                <i class="fa-solid fa-clock"></i>
+                <span id="modalTime"></span>
+              </div>
+              <div class="info-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span id="modalLocation"></span>
+              </div>
+              <div class="info-item">
+                <i class="fa-solid fa-tag"></i>
+                <span id="modalCategory"></span>
+              </div>
             </div>
-            <div class="info-item">
-              <i class="fa-solid fa-clock"></i>
-              <span id="modalTime"></span>
+            <p id="modalBody"></p>
+            
+            <div class="event-actions-modal">
+              <div class="subscription-actions">
+                <button id="btnSubscribe" class="btn-subscribe">
+                  <i class="fa-solid fa-user-plus"></i> Inscrever-se
+                </button>
+                <button id="btnAddToCalendar" class="btn-calendar">
+                  <i class="fa-solid fa-calendar-plus"></i> Adicionar à Agenda
+                </button>
+              </div>
+              <div class="social-actions">
+                <button class="btn-like">
+                  <i class="fa-regular fa-thumbs-up"></i> Curtir
+                </button>
+                <button class="btn-comment">
+                  <i class="fa-regular fa-comment"></i> Comentar
+                </button>
+                <button class="btn-share">
+                  <i class="fa-solid fa-share-nodes"></i> Compartilhar
+                </button>
+              </div>
             </div>
-            <div class="info-item">
-              <i class="fa-solid fa-location-dot"></i>
-              <span id="modalLocation"></span>
-            </div>
-            <div class="info-item">
-              <i class="fa-solid fa-tag"></i>
-              <span id="modalCategory"></span>
-            </div>
-          </div>
-          <p id="modalBody"></p>
-          
-          <div class="event-actions-modal">
-            <div class="subscription-actions">
-              <button id="btnSubscribe" class="btn-subscribe">
-                <i class="fa-solid fa-user-plus"></i> Inscrever-se
-              </button>
-              <button id="btnAddToCalendar" class="btn-calendar">
-                <i class="fa-solid fa-calendar-plus"></i> Adicionar à Agenda
-              </button>
-            </div>
-            <div class="social-actions">
-              <button class="btn-like">
-                <i class="fa-regular fa-thumbs-up"></i> Curtir
-              </button>
-              <button class="btn-comment">
-                <i class="fa-regular fa-comment"></i> Comentar
-              </button>
-              <button class="btn-share">
-                <i class="fa-solid fa-share-nodes"></i> Compartilhar
-              </button>
-            </div>
-          </div>
 
-          <section id="commentsSection">
-            <h3>Comentários</h3>
-            <div id="commentsList"></div>
-            <textarea
-              id="commentInput"
-              placeholder="Escreva um comentário..."
-              rows="3"
-            ></textarea>
-            <button id="btnAddComment">Comentar</button>
-          </section>
+            <section id="commentsSection">
+              <h3>Comentários</h3>
+              <div id="commentsList"></div>
+              <textarea
+                id="commentInput"
+                placeholder="Escreva um comentário..."
+                rows="3"
+              ></textarea>
+              <button id="btnAddComment">Comentar</button>
+            </section>
+          </div>
         </div>
       </div>
     </div>
