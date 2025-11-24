@@ -74,13 +74,31 @@ Fonte: agricultura.mg.gov.br`,
     },
     {
       id: 3,
-      title: "Novas Tecnologias para Produtores Familiares",
-      banner: "https://www.agroplanning.com.br/wp-content/uploads/2023/02/brandt1_2023_01.jpg",
-      body: "Tecnologias acessíveis para produtores familiares impulsionarem seus negócios.",
+      title: "Ponte Nova recebe Dia de Campo com foco em inovação e agricultura familiar",
+      banner: "https://www.portaldoagronegocio.com.br/img/cache/cover//storage/images/notices/68d31dfd86d6f.jpg",
+      body: `Nesta terça-feira, 30 de setembro, produtores rurais de Ponte Nova (MG) e região participam do Dia de Campo, evento voltado à troca de experiências e aprendizado sobre diversas cadeias produtivas. A programação inclui palestras e estações técnicas sobre cafeicultura, pecuária leiteira, piscicultura de corte e ornamental, apicultura e cultivo de feijão.
+
+O encontro é promovido pelo Sindicato dos Produtores Rurais de Ponte Nova, em parceria com Sistema Faemg Senar, Epamig e Emater-MG, com apoio da prefeitura local.
+
+Programação detalhada do evento
+O evento gratuito será realizado no Parque de Exposições, das 9h às 15h. A abertura inclui credenciamento, café e cerimônia oficial. Às 11h, acontece a palestra “Oportunidades de mercado para agricultores familiares”, que abordará estratégias para ampliar mercados e valorizar a produção local.
+
+No período da tarde, das 13h às 15h, os participantes poderão escolher estações técnicas de acordo com seus interesses:
+Cultivo de café arábica e conilon: práticas regenerativas e conservação do solo;
+Pecuária leiteira: alimentação e Programa de Assistência Técnica e Gerencial (ATeG);
+Piscicultura de corte e ornamental;
+Apicultura: aproveitamento dos derivados do mel;
+Produção de feijão.
+
+O evento busca aproximar produtores e instituições de pesquisa e extensão, promovendo acesso a novas tecnologias essenciais para fortalecer a agricultura familiar na região.
+
+---
+
+Fonte: portaldoagronegocio.com.br`,
       topics: ["familiar", "tecnologico"],
-      likes: 7,
+      likes: 44,
       userLikes: [],
-      comments: [],
+      comments: [{ user: "Fernando", text: "Informações muito importantes para o setor. Parabéns!" }],
       highlight: false
     },
     {
