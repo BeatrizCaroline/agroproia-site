@@ -98,7 +98,10 @@ Fonte: portaldoagronegocio.com.br`,
       topics: ["familiar", "tecnologico"],
       likes: 44,
       userLikes: [],
-      comments: [{ user: "Fernando", text: "Informações muito importantes para o setor. Parabéns!" }],
+      comments: [{ user: "Fernando", text: "Informações muito importantes para o setor. Parabéns!" },
+                 { user: "Márcio", text: "Muito bom. Gostei do tom da matéria." },
+                 { user: "Vitor Hugo", text: "Informação valiosa para tomada de decisões no campo." }
+                ],
       highlight: false
     },
     {
@@ -140,9 +143,20 @@ Fonte: portaldoagronegocio.com.br`,
     },
     {
       id: 102,
-      title: "Inovações em Agrotecnologia",
-      banner: "https://www.portaldoagronegocio.com.br/img/cache/cover//storage/images/notices/67a1386651072.jpg",
-      body: "Novas ferramentas e máquinas que revolucionam o campo.",
+      title: "IA no agro: tecnologia já é uma realidade no setor",
+      banner: "https://s2-oglobo.glbimg.com/gXQ3N_h48Hp2UsiN9QRDEcd6EfY=/0x0:934x302/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2024/D/E/shOfgcTrWETELPbGSDFQ/agro-1-capa.jpg",
+      body: `A Inteligência Artificial tem se consolidado como uma aliada estratégica para o agronegócio, trazendo inovações que transformam a maneira como o setor lida com os desafios diários e as incertezas climáticas. De acordo com um levantamento da Statista, plataforma global de dados e inteligência de negócios, o mercado de IA no segmento deve movimentar cerca de US$ 4,7 bilhões por ano até 2028.
+
+Já no Brasil, segundo a pesquisa ‘A Reinvenção do Agronegócio Brasileiro’, realizada pela PwC Brasil e divulgada em abril deste ano, 78% dos CEOs do setor planejam investir na integração de IA com plataformas tecnológicas nos próximos 12 meses, um índice superior à média nacional de outros setores, que é de 69%. “Esse dado demonstra que o agronegócio brasileiro está mais atento às novas tecnologias, especialmente em um cenário marcado pelas mudanças climáticas e pela necessidade de adaptação constante. A IA oferece soluções que permitem aos produtores fazer frente aos desafios impostos por esses extremos climáticos e, ao mesmo tempo, aumentar a resiliência e a sustentabilidade da produção”, explica Henrique Galvani, que atua no segmento.
+
+IA como alavanca de produtividade e sustentabilidade no campo
+Segundo Galvani, a aplicação de IA vai muito além da automação de processos: ela representa uma nova era de inteligência no uso dos recursos. Isso inclui redução de insumos químicos, economia de água, minimização de perdas na colheita e melhorias significativas na logística e armazenagem. “Hoje já existem diversas soluções disponíveis e acessíveis, como o monitoramento por drones com análise preditiva, a recomendação automatizada de fertilizantes com base na análise de solo, e a previsão ideal de colheita com base em dados climáticos e fenológicos. Com IA, é possível desenvolver uma gestão muito mais precisa dos recursos naturais, com controle em tempo real do clima, da irrigação e do crescimento das plantas”, salienta.
+
+Além disso, a IA tem sido cada vez mais utilizada em plataformas de climate intelligence, com modelos que ajudam produtores e cooperativas a anteciparem riscos climáticos e tomarem decisões baseadas em dados. Outro campo em expansão é o uso da IA generativa para modelar cenários de produção e precificação de commodities, apoiar o planejamento logístico e acelerar o desenvolvimento de novas sementes e bioinsumos.
+
+---
+
+Fonte: opresenterural.com.br`,
       topics: ["agrotecnologia", "inovacao"],
       likes: 28,
       userLikes: [],
