@@ -11,7 +11,7 @@
       id: 1,
       title: "Inovações na Agricultura Sustentável",
       banner: "https://www.sygmasistemas.com.br/wp-content/uploads/2024/09/agricultura-moderna.jpg",
-      body: "Texto detalhado sobre inovações na agricultura sustentável.",
+      body: "A 30ª edição da Agrishow, maior feira de tecnologia agrícola da América Latina e uma das mais importantes do mundo, está sendo palco de discussões fundamentais sobre o futuro do agronegócio brasileiro.Um dos destaques é o Agrishow Labs, um espaço de inovação que reúne startups, pesquisadores, investidores e líderes do setor para debater e apresentar soluções tecnológicas de ponta para a agricultura.Com uma programação exclusiva de conteúdo, o Agrishow Labs promoveu na tarde da última segunda (28), a Palestra Magna “Uma visão sobre a história e as oportunidades do futuro na agricultura”, com a presença do ex-ministro da agricultura, Roberto Rodrigues, que compartilhou sua visão sobre os avanços e desafios da agricultura tropical sustentável, reafirmando o papel protagonista do Brasil no cenário global.",
       topics: ["sustentavel", "inovacao"],
       likes: 12,
       userLikes: [],
