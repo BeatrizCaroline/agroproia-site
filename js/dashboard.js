@@ -117,10 +117,13 @@ function criarGraficos() {
   marker: { color: '#e74c3c' }
 }], { 
   title: 'Problemas Mais Relatados',
-  xaxis: { title: 'Número de Ocorrências' },
+  xaxis: {
+    title: 'Número de Ocorrências',
+    domain: [0.15, 1] 
+  },
   yaxis: { title: 'Problemas' },
   margin: {
-    l: 250
+    l: 100
   }
 });
 
