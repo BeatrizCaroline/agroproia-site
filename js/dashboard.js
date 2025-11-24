@@ -120,7 +120,7 @@ function criarGraficos() {
   xaxis: { title: 'Número de Ocorrências' },
   yaxis: { title: 'Problemas' },
   margin: {
-    l: 200
+    l: 250
   }
 });
 
