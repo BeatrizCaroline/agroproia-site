@@ -10,10 +10,20 @@
     {
       id: 1,
       title: "Inovações na Agricultura Sustentável",
-      banner: "https://www.sygmasistemas.com.br/wp-content/uploads/2024/09/agricultura-moderna.jpg",
-      body: "A 30ª edição da Agrishow, maior feira de tecnologia agrícola da América Latina e uma das mais importantes do mundo, está sendo palco de discussões fundamentais sobre o futuro do agronegócio brasileiro.Um dos destaques é o Agrishow Labs, um espaço de inovação que reúne startups, pesquisadores, investidores e líderes do setor para debater e apresentar soluções tecnológicas de ponta para a agricultura.Com uma programação exclusiva de conteúdo, o Agrishow Labs promoveu na tarde da última segunda (28), a Palestra Magna “Uma visão sobre a história e as oportunidades do futuro na agricultura”, com a presença do ex-ministro da agricultura, Roberto Rodrigues, que compartilhou sua visão sobre os avanços e desafios da agricultura tropical sustentável, reafirmando o papel protagonista do Brasil no cenário global.",
+      banner: "https://d2yghbees9788u.cloudfront.net/agrishow/2025/04/capa-artigo-canal-digital-19-1-768x317.png",
+      body: `A 30ª edição da Agrishow, maior feira de tecnologia agrícola da América Latina e uma das mais importantes do mundo, está sendo palco de discussões fundamentais sobre o futuro do agronegócio brasileiro.
+
+Um dos destaques é o Agrishow Labs, um espaço de inovação que reúne startups, pesquisadores, investidores e líderes do setor para debater e apresentar soluções tecnológicas de ponta para a agricultura.
+
+Com uma programação exclusiva de conteúdo, o Agrishow Labs promoveu na tarde da última segunda (28), a Palestra Magna “Uma visão sobre a história e as oportunidades do futuro na agricultura”, com a presença do ex-ministro da agricultura, Roberto Rodrigues, que compartilhou sua visão sobre os avanços e desafios da agricultura tropical sustentável, reafirmando o papel protagonista do Brasil no cenário global.
+
+“A inovação tecnológica e a educação são pilares fundamentais para consolidar o protagonismo brasileiro na agricultura mundial sustentável”, afirma o ex-ministro.
+
+---
+
+Fonte: digital.agrishow.com.br/`,
       topics: ["sustentavel", "inovacao"],
-      likes: 12,
+      likes: 20,
       userLikes: [],
       comments: [
         { user: "João", text: "Excelente notícia!" },
