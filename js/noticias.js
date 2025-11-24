@@ -17,7 +17,8 @@
       userLikes: [],
       comments: [
         { user: "João", text: "Excelente notícia!" },
-        { user: "Maria", text: "Muito relevante para o setor." }
+        { user: "Maria", text: "Muito relevante para o setor." },
+        { user: "Jonas", text: "Show de bola!" }
       ],
       highlight: false
     },
