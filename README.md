@@ -98,7 +98,7 @@ Espaço destinado para apresentar os responsáveis pelo site:
 | Nome | Função | Contato |
 |------|--------|---------|
 | *Beatriz Caroline de Brito dos Reis* | *Dev. Fullstack* | *[LinkedIn](http://www.linkedin.com/in/beatriz-caroline-br)* |
-| *Carlos Eduardo Viana Pereira* | *Dados* | ** |
+| *Carlos Eduardo Viana Pereira* | *Dados* | ... |
 
 ---
 
@@ -111,12 +111,14 @@ Copyright (c) 2025 - Beatriz Caroline de Brito dos Reis
 
 ---
 
-Seja bem-vindo ao **AgroProAI**, onde tecnologia e campo se encontram para transformar o futuro da agricultura! 🌱🚜💡
+Seja bem-vindo ao **AgroProAI**, onde tecnologia e campo se encontram para transformar o futuro da agricultura!💡
 
 ## 🔑 Acesso para Testes
 
 Para fins de demonstração, disponibilizamos um usuário de teste para que você possa acessar a área logada do sistema:
 
 **Email:** admin@agroproai.com
+
 **Senha:** Admin!2025
+
 *[Site AgroProAI](https://agroproia-site.vercel.app/)*
